@@ -1,0 +1,95 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #010215;
+}
+
+/* Estilos del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #8345FF; /* Color de fondo del navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px; /* Tamaño fijo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1.5; /* Ajuste del espacio del menú */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none; /* Asegúrate de que no haya subrayado */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    padding: 20px; /* Espacio alrededor del contenedor */
+    margin-top: 200px; /* Ajusta este valor para bajar más el contenido */
+    opacity: 0; /* Comienza oculto */
+    animation: fadeInUp 1s forwards; /* Aplica la animación */
+}
+
+.image-container {
+    flex: 1; /* La imagen ocupará una parte del contenedor */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-right: 0; /* Elimina el espacio entre la imagen y el texto */
+}
+
+.image-container img {
+    max-width: 80%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 500px;
+}
+
+.text-container {
+    flex: 2; /* El texto ocupará más espacio que la imagen */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.subtitle {
+    font-size: 40px; /* Tamaño del subtítulo */
+    margin-bottom: 5px; /* Reduce el espacio debajo del subtítulo */
+}
+
+.brief-text {
+    font-size: 28px; /* Tamaño del texto breve aumentado */
+    color: #ccc; /* Color más claro para el texto breve */
+}
+
+/* Animación de desvanecimiento y movimiento hacia arriba */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Mueve hacia abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}

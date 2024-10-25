@@ -1,0 +1,154 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente utilizada para todo el cuerpo */
+    background-image: url('../img/Productos.png'); /* Imagen de fondo */
+    background-size: cover; /* Cubrir toda la pantalla */
+    background-position: center; /* Centrar la imagen */
+    overflow: hidden; /* Evitar el scroll */
+    animation: backgroundMove 5s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Animación de movimiento en el fondo */
+}
+
+/* Estilos del navbar */
+.navbar {
+    display: flex; /* Flexbox para organizar el navbar */
+    justify-content: space-between; /* Espacio entre logo y enlaces */
+    align-items: center; /* Centrar verticalmente */
+    padding: 20px 50px; /* Espaciado interno */
+    background-color: #8345FF; /* Color de fondo del navbar */
+    position: fixed; /* Fijar en la parte superior */
+    top: 0; /* Posición superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.logo img {
+    width: 80px; /* Tamaño fijo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.nav-links {
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Flexbox para los enlaces */
+    justify-content: center; /* Centrar los enlaces */
+    gap: 30px; /* Espacio entre enlaces */
+    flex: 1.5; /* Ajuste del espacio del menú */
+}
+
+.nav-links li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+/* Estilo para el título de productos */
+.product-title {
+    text-align: center; /* Centrar el texto */
+    color: white; /* Color del texto */
+    font-size: 36px; /* Tamaño de fuente */
+    margin-top: 150px; /* Espacio por encima del título */
+}
+
+/* Contenedor de productos */
+.product-container {
+    display: flex; /* Flexbox para los productos */
+    justify-content: space-around; /* Espacio entre los productos */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
+    padding: 20px; /* Espaciado interno */
+    opacity: 0; /* Ocultar inicialmente */
+    animation: fadeIn 1s forwards; /* Animación para el contenedor */
+    animation-delay: 0.5s; /* Retraso en la animación */
+}
+
+/* Estilos para cada producto */
+.product-item {
+    background-color: rgba(123, 65, 240, 0.5); /* Color con 50% de transparencia */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px; /* Espacio interno aumentado */
+    text-align: center; /* Centrando el texto */
+    width: 200px; /* Ancho fijo aumentado */
+    height: 200px; /* Alto fijo para hacer los divs más largos */
+    margin: 20px; /* Espacio entre los productos */
+    display: flex; /* Flexbox para centrar contenido */
+    flex-direction: column; /* Apilar el texto y el icono */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    opacity: 0; /* Ocultar inicialmente */
+    animation: slideIn 0.5s forwards; /* Animación para los items */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el hover */
+}
+
+/* Cambiar el fondo y escalar al pasar el ratón */
+.product-item:hover {
+    background-color: rgba(123, 65, 240, 0.8); /* Color de fondo más oscuro */
+    transform: scale(1.05); /* Aumentar el tamaño ligeramente */
+}
+
+/* Animaciones */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%; /* Comienza en la posición original */
+    }
+    50% {
+        background-position: 0% 50%; /* Desplaza la imagen hasta la mitad */
+    }
+    100% {
+        background-position: 0% 50%; /* Se detiene en la mitad */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplícame una animación diferente para cada producto */
+.product-item:nth-child(1) {
+    animation-delay: 1s; /* Retardo de 1 segundo */
+}
+
+.product-item:nth-child(2) {
+    animation-delay: 1.1s; /* Retardo de 1.1 segundos */
+}
+
+.product-item:nth-child(3) {
+    animation-delay: 1.2s; /* Retardo de 1.2 segundos */
+}
+
+.product-item:nth-child(4) {
+    animation-delay: 1.3s; /* Retardo de 1.3 segundos */
+}
+
+.product-item:nth-child(5) {
+    animation-delay: 1.4s; /* Retardo de 1.4 segundos */
+}
+
+.product-item i {
+    font-size: 50px; /* Tamaño del icono aumentado */
+    margin-top: 10px; /* Margen superior del icono */
+}

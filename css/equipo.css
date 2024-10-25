@@ -1,0 +1,129 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #010215; /* Fondo de la página */
+}
+
+/* Estilos del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #8345FF; /* Color de fondo del navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px; /* Tamaño fijo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1.5; /* Ajuste del espacio del menú */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none; /* Asegúrate de que no haya subrayado */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Estilo para el título del equipo */
+.team-title {
+    text-align: center;
+    color: white;
+    font-size: 36px; /* Tamaño del texto grande */
+    margin-top: 150px; /* Espacio por encima del título ajustado a 150px */
+    font-weight: 300; /* Cambiado a un peso de fuente más ligero */
+    opacity: 0; /* Ocultar inicialmente */
+    animation: fadeIn 0.5s forwards; /* Animación para el título */
+}
+
+/* Animación para el texto */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Desvanecer a visible */
+    }
+}
+
+.highlight {
+    color: #9c4aff; /* Color violeta para ETHOS */
+}
+
+/* Estilos del contenedor del equipo */
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
+    padding: 20px;
+    margin-top: 220px;
+}
+
+/* Estilos para cada miembro del equipo */
+.team-member {
+    background: linear-gradient(to bottom, #010215, #8345FF);
+    color: white;
+    border-radius: 10px; 
+    padding: 20px;
+    text-align: center;
+    width: 200px; 
+    margin: 10px;
+    opacity: 0; 
+    animation: fadeIn 0.5s forwards; 
+}
+
+/* Animación para cada miembro */
+.team-member {
+    animation-name: fadeIn;
+}
+
+.team-member:nth-child(1) {
+    animation-delay: 0.5s; /* Retraso para el primer miembro */
+}
+
+.team-member:nth-child(2) {
+    animation-delay: 1s; /* Retraso para el segundo miembro */
+}
+
+.team-member:nth-child(3) {
+    animation-delay: 1.5s; /* Retraso para el tercer miembro */
+}
+
+.team-member:nth-child(4) {
+    animation-delay: 2s; /* Retraso para el cuarto miembro */
+}
+
+/* Estilo del círculo para la imagen */
+.circle {
+    width: 100px; /* Ancho del círculo */
+    height: 100px; /* Alto del círculo */
+    border-radius: 50%; /* Haciendo el círculo */
+    overflow: hidden; /* Ocultar desbordes */
+    margin: 0 auto; /* Centrando el círculo */
+}
+
+/* Ajusta el margen inferior del círculo */
+.circle img {
+    width: 100%; /* Ajustar la imagen al círculo */
+    height: auto; /* Mantener proporción */
+}
+
+/* Añade margen a los párrafos de texto */
+.team-member p {
+    margin-top: 30px; /* Espacio entre la imagen y el texto ajustado a 30px */
+}

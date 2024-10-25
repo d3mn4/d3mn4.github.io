@@ -1,0 +1,104 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url(../img/fondo.png);
+}
+
+/* Estilos del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #8345FF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: none; /* Asegúrate de que no haya borde */
+}
+
+.logo img {
+    width: 80px; /* Tamaño fijo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1.5; /* Ajuste del espacio del menú */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none; /* Asegúrate de que no haya subrayado */
+    font-size: 18px;
+    font-weight: 600;
+    border: none; /* Elimina cualquier borde en los enlaces */
+}
+
+/* Estilos para los íconos de Instagram y X */
+.nav-links li a i {
+    font-size: 24px; /* Tamaño fijo de los íconos */
+}
+
+/* Sección hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+    padding-top: 80px; /* Para que no se solape con el navbar */
+    background: linear-gradient(to bottom, #3802AA, #010215); /* Degradado de fondo */
+}
+
+.hero-text {
+    opacity: 0; /* Comienza oculto */
+    animation: slideInUp 1s forwards; /* Aplica la nueva animación */
+    animation-delay: 0.5s; /* Retraso para que el texto aparezca después de la sección */
+}
+
+.hero-text h1 {
+    font-size: 100px; /* Tamaño grande del texto */
+    font-weight: 900; /* Texto grueso */
+    letter-spacing: -2px; /* Ajuste de espaciado entre letras */
+    line-height: 1.1;
+}
+
+.ethos {
+    font-size: 140px; /* ETHOS más grande */
+    color: #9c4aff;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 300; /* Texto más ligero */
+}
+
+.hero-text span {
+    color: #9c4aff; /* Color morado para la palabra ethos */
+    font-weight: 700; /* Negrita para ethos */
+}
+
+/* Nueva animación de deslizamiento */
+@keyframes slideInUp {
+    from {
+        opacity: 0; /* Comienza oculto */
+        transform: translateY(30px); /* Comienza 30px más abajo */
+    }
+    to {
+        opacity: 1; /* Se vuelve visible */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}
