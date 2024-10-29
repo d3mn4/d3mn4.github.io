@@ -13,12 +13,16 @@
             <div class="logo">
                 <img src="img/logo.png" alt="ETHOS Logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="Inicio.html">Inicio</a></li>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="cliente.html">Clientes</a></li>
+                <li><a href="ubicacion.html">Ubicacion</a></li>
                 <li><a href="redes.html">Redes</a></li>
             </ul>
         </nav>
@@ -29,7 +33,7 @@
     <div class="team-container">
         <div class="team-member">
             <div class="circle">
-                <img src="img/pruebapfril.png" alt="Juan Texeira"> <!-- Cambia la ruta a la imagen de Juan -->
+                <img src="img/pruebapfril.png" alt="Victoria Lopez">
             </div>
             <p>Victoria Lopez</p>
             <p>Project Manager - Designer</p>
@@ -37,7 +41,7 @@
 
         <div class="team-member">
             <div class="circle">
-                <img src="img/pruebapfril.png" alt="Miembro 2"> <!-- Cambia la ruta a la imagen del segundo miembro -->
+                <img src="img/pruebapfril.png" alt="Juan Texeira">
             </div>
             <p>Juan Texeira</p>
             <p>Designer - Segundo PM</p>
@@ -45,7 +49,7 @@
 
         <div class="team-member">
             <div class="circle">
-                <img src="img/pruebapfril.png" alt="Miembro 3"> <!-- Cambia la ruta a la imagen del tercer miembro -->
+                <img src="img/pruebapfril.png" alt="Montes de Oca">
             </div>
             <p>Montes de Oca</p>
             <p>Designer - Programmer</p>
@@ -53,11 +57,20 @@
 
         <div class="team-member">
             <div class="circle">
-                <img src="img/pruebapfril.png" alt="Miembro 4"> <!-- Cambia la ruta a la imagen del cuarto miembro -->
+                <img src="img/pruebapfril.png" alt="Facundo Alvez">
             </div>
             <p>Facundo Alvez</p>
             <p>Designer - Programmer</p>
         </div>
     </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

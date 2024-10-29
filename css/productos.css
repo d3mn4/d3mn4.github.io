@@ -1,4 +1,3 @@
-/* Reset de márgenes y padding */
 * {
     margin: 0;
     padding: 0;
@@ -6,103 +5,99 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Fuente utilizada para todo el cuerpo */
-    background-image: url('../img/Productos.png'); /* Imagen de fondo */
-    background-size: cover; /* Cubrir toda la pantalla */
-    background-position: center; /* Centrar la imagen */
-    overflow: hidden; /* Evitar el scroll */
-    animation: backgroundMove 5s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Animación de movimiento en el fondo */
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/Productos.png');
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    animation: backgroundMove 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    color: white;
 }
 
-/* Estilos del navbar */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .navbar {
-    display: flex; /* Flexbox para organizar el navbar */
-    justify-content: space-between; /* Espacio entre logo y enlaces */
-    align-items: center; /* Centrar verticalmente */
-    padding: 20px 50px; /* Espaciado interno */
-    background-color: #8345FF; /* Color de fondo del navbar */
-    position: fixed; /* Fijar en la parte superior */
-    top: 0; /* Posición superior */
-    width: 100%; /* Ancho completo */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #8345FF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo img {
-    width: 80px; /* Tamaño fijo del logo */
-    height: auto; /* Mantiene la proporción del logo */
+    width: 80px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
 }
 
 .nav-links {
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Flexbox para los enlaces */
-    justify-content: center; /* Centrar los enlaces */
-    gap: 30px; /* Espacio entre enlaces */
-    flex: 1.5; /* Ajuste del espacio del menú */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1.5;
 }
 
 .nav-links li a {
-    color: white; /* Color del texto de los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 18px; /* Tamaño de fuente */
-    font-weight: 600; /* Peso de la fuente */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-/* Estilo para el título de productos */
 .product-title {
-    text-align: center; /* Centrar el texto */
-    color: white; /* Color del texto */
-    font-size: 36px; /* Tamaño de fuente */
-    margin-top: 150px; /* Espacio por encima del título */
+    text-align: center;
+    font-size: 36px;
+    margin-top: 150px;
 }
 
-/* Contenedor de productos */
 .product-container {
-    display: flex; /* Flexbox para los productos */
-    justify-content: space-around; /* Espacio entre los productos */
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
-    padding: 20px; /* Espaciado interno */
-    opacity: 0; /* Ocultar inicialmente */
-    animation: fadeIn 1s forwards; /* Animación para el contenedor */
-    animation-delay: 0.5s; /* Retraso en la animación */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
 }
 
-/* Estilos para cada producto */
 .product-item {
-    background-color: rgba(123, 65, 240, 0.5); /* Color con 50% de transparencia */
-    color: white; /* Color del texto */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 30px; /* Espacio interno aumentado */
-    text-align: center; /* Centrando el texto */
-    width: 200px; /* Ancho fijo aumentado */
-    height: 200px; /* Alto fijo para hacer los divs más largos */
-    margin: 20px; /* Espacio entre los productos */
-    display: flex; /* Flexbox para centrar contenido */
-    flex-direction: column; /* Apilar el texto y el icono */
-    align-items: center; /* Centrar horizontalmente */
-    justify-content: center; /* Centrar verticalmente */
-    opacity: 0; /* Ocultar inicialmente */
-    animation: slideIn 0.5s forwards; /* Animación para los items */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el hover */
+    background-color: rgba(123, 65, 240, 0.5);
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Cambiar el fondo y escalar al pasar el ratón */
 .product-item:hover {
-    background-color: rgba(123, 65, 240, 0.8); /* Color de fondo más oscuro */
-    transform: scale(1.05); /* Aumentar el tamaño ligeramente */
-}
-
-/* Animaciones */
-@keyframes backgroundMove {
-    0% {
-        background-position: 0% 0%; /* Comienza en la posición original */
-    }
-    50% {
-        background-position: 0% 50%; /* Desplaza la imagen hasta la mitad */
-    }
-    100% {
-        background-position: 0% 50%; /* Se detiene en la mitad */
-    }
+    background-color: rgba(123, 65, 240, 0.8);
+    transform: scale(1.05);
 }
 
 @keyframes fadeIn {
@@ -127,28 +122,55 @@ body {
     }
 }
 
-/* Aplícame una animación diferente para cada producto */
 .product-item:nth-child(1) {
-    animation-delay: 1s; /* Retardo de 1 segundo */
+    animation-delay: 1s;
 }
 
 .product-item:nth-child(2) {
-    animation-delay: 1.1s; /* Retardo de 1.1 segundos */
+    animation-delay: 1.1s;
 }
 
 .product-item:nth-child(3) {
-    animation-delay: 1.2s; /* Retardo de 1.2 segundos */
+    animation-delay: 1.2s;
 }
 
 .product-item:nth-child(4) {
-    animation-delay: 1.3s; /* Retardo de 1.3 segundos */
+    animation-delay: 1.3s;
 }
 
 .product-item:nth-child(5) {
-    animation-delay: 1.4s; /* Retardo de 1.4 segundos */
+    animation-delay: 1.4s;
 }
 
 .product-item i {
-    font-size: 50px; /* Tamaño del icono aumentado */
-    margin-top: 10px; /* Margen superior del icono */
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: white;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #8345FF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
 }

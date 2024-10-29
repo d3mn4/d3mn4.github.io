@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #0B0D15;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #8345FF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1.5;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.redes {
+    text-align: center;
+    padding: 150px 20px 100px 20px;
+    color: white;
+}
+
+.redes h1 {
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    animation: fadeIn 1s ease forwards;
+}
+
+.social-icons {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.social-icons i {
+    color: white;
+    margin: 0 10px;
+}
+
+.devices {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.devices img {
+    max-width: 100%;
+    height: auto;
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: white;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #8345FF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .redes h1 {
+        font-size: 20px;
+    }
+
+    .social-icons {
+        font-size: 30px;
+    }
+
+    .devices {
+        margin-top: 20px;
+    }
+}

@@ -13,12 +13,16 @@
             <div class="logo">
                 <img src="img/logo.png" alt="ETHOS Logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="Inicio.html">Inicio</a></li>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="cliente.html">Clientes</a></li>
+                <li><a href="ubicacion.html">Ubicacion</a></li>
                 <li><a href="redes.html">Redes</a></li>
             </ul>
         </nav>
@@ -27,11 +31,20 @@
     <div class="container">
         <div class="text-container">
             <h2 class="subtitle">Nuestro Cliente:</h2>
-            <p class="brief-text">Centros Educativos Impulso es la <br> primera secundaria laica, de gestión <br> privada y acceso gratuito en Uruguay. <br> Recientemente han ampliado su oferta <br> con una nueva secundaria, y esperamos <br> que nuestra comunidad se beneficie de <br> los servicios de ETHOS</p>
+            <p class="brief-text">Centros Educativos Impulso es la primera secundaria laica, de gestión privada y acceso gratuito en Uruguay. Recientemente han ampliado su oferta con una nueva secundaria, y esperamos que nuestra comunidad se beneficie de los servicios de ETHOS.</p>
         </div>
         <div class="image-container">
             <img src="img/impulso.png" alt="Descripción de la imagen">
         </div>
     </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

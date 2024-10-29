@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETHOS</title>
+    <title>Ubicación ETHOS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/ubicacion.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -22,19 +23,22 @@
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="cliente.html">Clientes</a></li>
-                <li><a href="ubicacion.html">Ubicacion</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
                 <li><a href="redes.html">Redes</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>BIENVENIDO A</h1>
-            <h1 class="ethos">ETHOS</h1>
-            <p>Transformemos el futuro con tecnología y un <span>ethos</span> de innovación</p>
+    <!-- Ubicación Section -->
+    <main class="container">
+        <div class="image-container">
+            <img src="img/iphone.png" alt="Mapa de Ubicación">
         </div>
-    </section>
+        <div class="text-container">
+            <h1>Nuestra Ubicación <i class="fas fa-map-marker-alt"></i></h1>
+            <p>La sede de <span>ETHOS</span> se ubica en la cuenca de Casavalle</p>
+        </div>
+    </main>
 
     <script>
         const mobileMenu = document.getElementById('mobile-menu');

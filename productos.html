@@ -13,12 +13,16 @@
             <div class="logo">
                 <img src="img/logo.png" alt="ETHOS Logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="Inicio.html">Inicio</a></li>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="cliente.html">Clientes</a></li>
+                <li><a href="ubicacion.html">Ubicacion</a></li>
                 <li><a href="redes.html">Redes</a></li>
             </ul>
         </nav>
@@ -29,25 +33,34 @@
         <div class="product-container">
             <a href="hosting.html" class="product-item">
                 <p>Hosting</p>
-                <i class="fas fa-server"></i> <!-- Icono para hosting -->
+                <i class="fas fa-server"></i>
             </a>
             <a href="pagina_web.html" class="product-item">
                 <p>Página Web</p>
-                <i class="fas fa-laptop-code"></i> <!-- Icono para página web -->
+                <i class="fas fa-laptop-code"></i>
             </a>
             <a href="sistema.html" class="product-item">
                 <p>Sistema</p>
-                <i class="fas fa-cogs"></i> <!-- Icono para sistema -->
+                <i class="fas fa-cogs"></i>
             </a>
             <a href="mantenimiento.html" class="product-item">
                 <p>Mantenimiento</p>
-                <i class="fas fa-tools"></i> <!-- Icono para mantenimiento -->
+                <i class="fas fa-tools"></i>
             </a>
             <a href="marketing.html" class="product-item">
                 <p>Marketing</p>
-                <i class="fas fa-bullhorn"></i> <!-- Icono para marketing -->
+                <i class="fas fa-bullhorn"></i>
             </a>
         </div>
     </main>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

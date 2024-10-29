@@ -1,4 +1,3 @@
-/* Reset de márgenes y padding */
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +6,10 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #0B0B1E;
     color: white;
-    background-image: url(../img/fondo.png);
 }
 
-/* Estilos del navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -22,12 +20,16 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: none; /* Asegúrate de que no haya borde */
 }
 
 .logo img {
-    width: 80px; /* Tamaño fijo del logo */
-    height: auto; /* Mantiene la proporción del logo */
+    width: 80px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -35,70 +37,131 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex: 1.5; /* Ajuste del espacio del menú */
+    flex: 1.5;
 }
 
 .nav-links li a {
     color: white;
-    text-decoration: none; /* Asegúrate de que no haya subrayado */
+    text-decoration: none;
     font-size: 18px;
     font-weight: 600;
-    border: none; /* Elimina cualquier borde en los enlaces */
 }
 
-/* Estilos para los íconos de Instagram y X */
-.nav-links li a i {
-    font-size: 24px; /* Tamaño fijo de los íconos */
-}
-
-/* Sección hero */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 50px;
-    padding-top: 80px; /* Para que no se solape con el navbar */
-    background: linear-gradient(to bottom, #3802AA, #010215); /* Degradado de fondo */
+    padding: 80px 50px 0 50px;
+    background: linear-gradient(to bottom, #3802AA, #010215);
 }
 
 .hero-text {
-    opacity: 0; /* Comienza oculto */
-    animation: slideInUp 1s forwards; /* Aplica la nueva animación */
-    animation-delay: 0.5s; /* Retraso para que el texto aparezca después de la sección */
+    opacity: 0;
+    animation: slideInUp 1s forwards;
+    animation-delay: 0.5s;
 }
 
 .hero-text h1 {
-    font-size: 100px; /* Tamaño grande del texto */
-    font-weight: 900; /* Texto grueso */
-    letter-spacing: -2px; /* Ajuste de espaciado entre letras */
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: -2px; 
     line-height: 1.1;
 }
 
 .ethos {
-    font-size: 140px; /* ETHOS más grande */
+    font-size: 140px;
     color: #9c4aff;
 }
 
 .hero-text p {
     margin-top: 20px;
     font-size: 24px;
-    font-weight: 300; /* Texto más ligero */
+    font-weight: 300;
 }
 
 .hero-text span {
-    color: #9c4aff; /* Color morado para la palabra ethos */
-    font-weight: 700; /* Negrita para ethos */
+    color: #9c4aff;
+    font-weight: 700;
 }
 
-/* Nueva animación de deslizamiento */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: white;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #8345FF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding: 50px 20px 0 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 60px;
+    }
+
+    .ethos {
+        font-size: 80px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .hero {
+        padding: 30px 10px 0 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .ethos {
+        font-size: 60px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
 @keyframes slideInUp {
     from {
-        opacity: 0; /* Comienza oculto */
-        transform: translateY(30px); /* Comienza 30px más abajo */
+        opacity: 0; 
+        transform: translateY(30px); 
     }
     to {
-        opacity: 1; /* Se vuelve visible */
-        transform: translateY(0); /* Regresa a su posición original */
+        opacity: 1;
+        transform: translateY(0);
     }
 }

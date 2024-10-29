@@ -13,25 +13,38 @@
             <div class="logo">
                 <img src="img/logo.png" alt="ETHOS Logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="Inicio.html">Inicio</a></li>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="cliente.html">Clientes</a></li>
+                <li><a href="ubicacion.html">Ubicacion</a></li>
                 <li><a href="redes.html">Redes</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <div class="image-container">
-            <img src="img/ethosethos.png" alt="Descripción de la imagen">
-        </div>
         <div class="text-container">
             <h2 class="subtitle">¿Quiénes somos?</h2>
             <p class="brief-text">ETHOS es una empresa dedicada al <br>desarrollo y diseño de aplicaciones web <br>innovadoras y personalizadas. Nuestro <br> equipo de expertos combina creatividad  <br>y tecnología de vanguardia para ofrecer <br>soluciones digitales que mejoran la <br>experiencia del usuario y optimizan <br>procesos empresariales.</p>
         </div>
+        <div class="image-container">
+            <img src="img/ethosethos.png" alt="Descripción de la imagen">
+        </div>
     </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
